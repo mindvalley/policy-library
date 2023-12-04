@@ -28,5 +28,5 @@ spec:
     mode: "allowlist"
     locations:
     - us-central1
-    - us-east1-b
+    - us-east4
     exemptions: []
