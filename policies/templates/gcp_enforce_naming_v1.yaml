@@ -76,7 +76,7 @@ spec:
            	no_name_match(name, patterns)
            	trace(sprintf("no match name:%v, patterns:%v", [name, patterns]))
            
-           	message := sprintf("%v does not obey the naming convention. Full address: %v", [name, asset.name])
+           	message := sprintf("Does not obey the naming convention %v. Full address - %v", [name, asset.name])
            	metadata := {
            		"asset_name": name,
            		"asset_full_address": asset.name,
