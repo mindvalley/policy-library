@@ -28,5 +28,9 @@ spec:
   parameters:
     mode: "allowlist"
     locations:
+    - us-central1
+    - us-east4
+    - southamerica-east1
+    - europe-west3
     - asia-southeast1
     exemptions: []

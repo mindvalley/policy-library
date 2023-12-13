@@ -51,7 +51,7 @@ spec:
       - "^mv-(dev|stg|prod)-[a-z0-9]+-[a-z0-9]+-sn-[a-z0-9]+$"
     - resource: "compute.googleapis.com/Route"            # asset_type field from inventory
       patterns:
-      - "^mv-(dev|stg|prod)-[a-z0-9]+-route-[a-z0-9]+$"
+      - "^mv-(dev|stg|prod)-[a-z0-9]+-[a-z0-9]+-route-[a-z0-9]+$"
     - resource: "compute.googleapis.com/Firewall"         # asset_type field from inventory
       patterns:
       - "^mv-[a-z0-9]+-(allow|deny)-(all|icmp|tcp|udp)-access$"
