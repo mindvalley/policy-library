@@ -25,4 +25,4 @@ spec:
     members:
     - "user:*@mindvalley.com"
     - "group:*@mindvalley.com"
-    # - "user:required-user@random-group.com"
+    - "user:tech-sre-members@mindvalley.com"

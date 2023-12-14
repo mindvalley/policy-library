@@ -70,7 +70,7 @@ spec:
             	forbidden := forbidden_networks(cluster, params)
             	count(forbidden) > 0
             
-            	message := sprintf("%v master is accessible from unauthorized networks: %v", [asset.name, forbidden])
+            	message := sprintf("Master %v is accessible from unauthorized networks - %v", [asset.name, forbidden])
             	metadata := {"resource": asset.name}
             }
             
