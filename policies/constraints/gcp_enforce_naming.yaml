@@ -39,7 +39,7 @@ spec:
       - "^cloudsql-[a-z0-9]+-mv-(dev|stg|prod)-[a-z0-9]+"
     - resource: "redis.googleapis.com/Instance"           # asset_type field from inventory
       patterns:
-      - "^redis-[a-z0-9]+-mv-(dev|stg|prod)-multi-app$"
+      - "^redis-[a-z0-9]+-mv-(dev|stg|prod)-[a-z0-9]+"
     - resource: "storage.googleapis.com/Bucket"           # asset_type field from inventory
       patterns:
       - "^mv-(dev|stg|prod)-[a-z0-9]+-[a-z0-9]+$"
