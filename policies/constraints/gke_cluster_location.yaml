@@ -29,4 +29,5 @@ spec:
     locations:
     - us-central1
     - us-east4
+    - asia-southeast1
     exemptions: []

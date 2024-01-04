@@ -26,5 +26,20 @@ spec:
   severity: high
   match:
     ancestries:
-    - "organizations/**"
+    - "projects/mindvalleyadvertisingai"
+    - "projects/mv-blogs"
+    - "projects/mv-prod-coaching"
+    - "projects/mv-prod-linode"
+    - "projects/mv-prod-overmind2"
+    - "projects/mv-prod-spaces"
+    - "projects/mv-stg-coaching"
+    - "projects/mv-stg-connect"
+    - "projects/mv-stg-insights"
+    - "projects/mv-stg-lifebook"
+    - "projects/mv-stg-lifebook"
+    - "projects/mv-stg-overmind2"
+    - "projects/mv-stg-spaces"
+    - "projects/mv-stg-stories"
+    - "projects/mv-stg-usermanager"
+    # - "organizations/**"
     excludedAncestries: [] # optional, default is no exclusions

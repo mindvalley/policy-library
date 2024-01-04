@@ -26,6 +26,16 @@ spec:
   match:
     ancestries:
     - "organizations/**"
-    excludedAncestries: [] # optional, default is no exclusions
+    excludedAncestries:
+    - "projects/event-stream-staging"
+    - "projects/mv-auxiliary"
+    - "projects/mv-blogs"
+    - "projects/mv-brain" 
+    - "projects/mv-dev-mulail"
+    - "projects/mv-dev-ricardo" 
+    - "projects/mv-page-builder" 
+    - "projects/mv-page-builder-stg" 
+    - "projects/mv-prod-linode"
+    - "projects/mv-stg-auxiliary"
   parameters:
     exemptions: [] # optional, default is no exemptions
