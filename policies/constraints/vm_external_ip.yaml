@@ -24,7 +24,7 @@ spec:
   severity: high
   parameters:
     # modes can be [allowlist, denylist]
-    mode: denylist
+    mode: allowlist
     # match_mode can be [exact, regex], default is exact.
     match_mode: regex
     instances: []
