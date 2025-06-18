@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# - "projects/mv-dev-ricardo" -- For specific project only (ancestries)
 apiVersion: constraints.gatekeeper.sh/v1alpha1
 kind: GCPGKEAllowedNodeSAConstraintV1
 metadata:

@@ -13,18 +13,14 @@
 # limitations under the License.
 #
 apiVersion: constraints.gatekeeper.sh/v1alpha1
-kind: GCPSQLPublicIpConstraintV1
+kind: GCPNetworkRestrictDefaultV1
 metadata:
-  name: prevent-public-ip-cloudsql
+  name: network_restrict_default
   annotations:
-    description: Prevents a public IP from being assigned to a Cloud SQL instance.
-    bundles.validator.forsetisecurity.org/scorecard-v1: security
-    # This constraint has not been validated by the formal CIS certification process.
-    bundles.validator.forsetisecurity.org/cis-v1.1: 6.05
-    bundles.validator.forsetisecurity.org/healthcare-baseline-v1: security
+    description: "Restrict default networks with open firewall rules"
 spec:
   severity: high
   match:
     ancestries:
     - "organizations/**"
-    excludedAncestries: [] # optional, default is no exclusions
+  parameters: {}

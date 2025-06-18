@@ -61,7 +61,7 @@ spec:
         	enabled := legacy_abac_enabled(container)
         	enabled == true
         
-        	message := sprintf("Has legacy ABAC enabled %v.", [asset.name])
+        	message := sprintf("%v has legacy ABAC enabled.", [asset.name])
         	metadata := {"resource": asset.name}
         }
         

@@ -13,18 +13,18 @@
 # limitations under the License.
 #
 apiVersion: constraints.gatekeeper.sh/v1alpha1
-kind: GCPSQLPublicIpConstraintV1
+kind: GCPComputeZoneConstraintV1
 metadata:
-  name: prevent-public-ip-cloudsql
+  name: compute_zone_allowlist_one
   annotations:
-    description: Prevents a public IP from being assigned to a Cloud SQL instance.
-    bundles.validator.forsetisecurity.org/scorecard-v1: security
-    # This constraint has not been validated by the formal CIS certification process.
-    bundles.validator.forsetisecurity.org/cis-v1.1: 6.05
-    bundles.validator.forsetisecurity.org/healthcare-baseline-v1: security
+    description: Checks the instances and Persistent Disks are in desired zones.
 spec:
   severity: high
-  match:
-    ancestries:
-    - "organizations/**"
-    excludedAncestries: [] # optional, default is no exclusions
+  parameters:
+    mode: "allowlist"
+    zones:
+    - us-central1-.*
+    - us-east4-.*
+    - europe-west3-.*
+    - southamerica-east1-.*
+    exemptions: []

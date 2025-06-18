@@ -33,28 +33,30 @@ spec:
       - "cert-self-signed-.*"
     - resource: "compute.googleapis.com/Instance"         # asset_type field from inventory
       patterns:
-      - "^mv-(dev|stg|prod)-[a-z0-9]+-[a-z0-9]+-gce-[a-z0-9]+$"
+      - "^mv-(\\w+)-(\\w+)-(\\w+)-gce-(\\d+)$"
     - resource: "sqladmin.googleapis.com/Instance"        # asset_type field from inventory
       patterns:
-      - "^cloudsql-[a-z0-9]+-mv-(dev|stg|prod)-[a-z0-9]+"
+      - "^cloudsql-(\\w+)-mv-(\\w+)-(\\w+)-.*"
     - resource: "redis.googleapis.com/Instance"           # asset_type field from inventory
       patterns:
-      - "^redis-[a-z0-9]+-mv-(dev|stg|prod)-[a-z0-9]+"
+      - "^redis-(\\w+)-mv-(\\w+)-multi-app$"
     - resource: "storage.googleapis.com/Bucket"           # asset_type field from inventory
       patterns:
-      - "^mv-(dev|stg|prod)-[a-z0-9]+-[a-z0-9]+$"
+      - "^mv-(\\w+)-(\\w+)-(\\w+)$"
     - resource: "compute.googleapis.com/Network"          # asset_type field from inventory
       patterns:
-      - "^mv-(dev|stg|prod)-[a-z0-9]+-vpc-[a-z0-9]+$"
+      - "^mv-(\\w+)-(\\w+)-vpc-(\\d+)$"
     - resource: "compute.googleapis.com/Subnetwork"       # asset_type field from inventory
       patterns:
-      - "^mv-(dev|stg|prod)-[a-z0-9]+-[a-z0-9]+-sn-[a-z0-9]+$"
+      - "^mv-(\\w+)-(\\w+)-(\\w+)-sn-(\\d+)$"
     - resource: "compute.googleapis.com/Route"            # asset_type field from inventory
       patterns:
-      - "^mv-(dev|stg|prod)-[a-z0-9]+-[a-z0-9]+-route-[a-z0-9]+$"
+      - "^mv-(\\w+)-(\\w+)-route-(\\d+)$"
     - resource: "compute.googleapis.com/Firewall"         # asset_type field from inventory
       patterns:
-      - "^mv-[a-z0-9]+-(allow|deny)-(all|icmp|tcp|udp)-access$"
+      - "^mv-(\\w+)-allow-(\\w+)$"
+      - "^mv-(\\w+)-deny-(\\w+)$"
     - resource: "container.googleapis.com/Cluster"        # asset_type field from inventory
       patterns:
-      - "^mv-(dev|stg|prod)-[a-z0-9]+-[a-z0-9]+-gke-[a-z0-9]+$"
+      - "^mv-(\\w+)-(\\w+)-(\\w+)-gke-(\\d+)$"
+

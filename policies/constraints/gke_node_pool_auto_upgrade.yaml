@@ -13,18 +13,20 @@
 # limitations under the License.
 #
 apiVersion: constraints.gatekeeper.sh/v1alpha1
-kind: GCPSQLPublicIpConstraintV1
+kind: GCPGKENodeAutoUpgradeConstraintV1
 metadata:
-  name: prevent-public-ip-cloudsql
+  name: enable_auto_upgrade
   annotations:
-    description: Prevents a public IP from being assigned to a Cloud SQL instance.
-    bundles.validator.forsetisecurity.org/scorecard-v1: security
+    description: Ensure Automatic node upgrades is enabled on Kubernetes Engine Clusters nodes
     # This constraint has not been validated by the formal CIS certification process.
-    bundles.validator.forsetisecurity.org/cis-v1.1: 6.05
-    bundles.validator.forsetisecurity.org/healthcare-baseline-v1: security
+    bundles.validator.forsetisecurity.org/cis-v1.0: 7.08
+    bundles.validator.forsetisecurity.org/cis-v1.1: 7.08
+    bundles.validator.forsetisecurity.org/gke-hardening-v2019.11.11: ENABLED_NODE_AUTO_UPGRADE
+    bundles.validator.forsetisecurity.org/gke-hardening-v2022: ENABLED_NODE_AUTO_UPGRADE
+    bundles.validator.forsetisecurity.org/scorecard-v1: security
 spec:
   severity: high
   match:
     ancestries:
     - "organizations/**"
-    excludedAncestries: [] # optional, default is no exclusions
+  parameters: {}
