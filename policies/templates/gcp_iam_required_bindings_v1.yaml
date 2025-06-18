@@ -99,7 +99,7 @@ spec:
            
            	metadata := {
            		"resource": asset.name,
-                       "required_member": params_member,
+           		"required_member": params_member,
            		"role": role,
            	}
            }

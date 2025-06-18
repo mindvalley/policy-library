@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# equivalent to this command (gcloud container clusters update)
 apiVersion: constraints.gatekeeper.sh/v1alpha1
 kind: GCPGKERestrictPodTrafficConstraintV2
 metadata:

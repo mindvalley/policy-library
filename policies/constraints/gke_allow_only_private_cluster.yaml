@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# master_ipv4_cidr_block     = "192.168.5.0/28"
 apiVersion: constraints.gatekeeper.sh/v1alpha1
 kind: GCPGKEPrivateClusterConstraintV1
 metadata:

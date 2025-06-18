@@ -63,7 +63,7 @@ spec:
             
             	not check_all_disabled(master_auth, cluster_version)
             
-            	message := sprintf("Has client certificate or static password authentication enabled %v.", [asset.name])
+            	message := sprintf("%v has client certificate or static password authentication enabled.", [asset.name])
             	metadata := {"resource": asset.name}
             }
             
