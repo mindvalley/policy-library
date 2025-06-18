@@ -32,4 +32,5 @@ spec:
     - us-east4
     - europe-west3
     - southamerica-east1
+    - asia-southeast1
     exemptions: []
